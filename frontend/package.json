@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./src/index.css",
+    "build": "npm run build:css && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
